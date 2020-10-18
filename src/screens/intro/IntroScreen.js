@@ -1,9 +1,12 @@
 import React from 'react';
 import {View, Text, SafeAreaView, Image, StyleSheet} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
 import {Colors} from '../../utils/ColorUtils';
 
 export default IntroScreen = (props) => {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
@@ -23,7 +26,11 @@ export default IntroScreen = (props) => {
           </View>
         </View>
         <View style={styles.viewDetail}>
-          <TouchableOpacity activeOpacity={0.8}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => {
+              navigation.navigate('HomeScreen');
+            }}>
             <View style={styles.borderContainer}>
               <View style={styles.wrapperInner}>
                 <Image source={require('../../asserts/arrow-right.png')} />
