@@ -6,6 +6,8 @@ import {
   SafeAreaView,
   Image,
   TextInput,
+  ScrollView,
+  StatusBar,
 } from 'react-native';
 import {Colors} from '../../utils/ColorUtils';
 import PopularRecipes from './PopularRecipes';
@@ -13,7 +15,7 @@ import Recipies from './Recipies';
 
 export default HomeScreen = (props) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.wrapper}>
         <Text style={styles.heading}>What would you like to cook?</Text>
         <View style={styles.searchContainer}>
@@ -53,13 +55,14 @@ export default HomeScreen = (props) => {
             style={[styles.tabAtive, {backgroundColor: 'transparent'}]}></View>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 50,
   },
   wrapper: {},
   heading: {
