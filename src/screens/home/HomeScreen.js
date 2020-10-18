@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     borderTopColor: Colors.subText2,
     flexDirection: 'row',
     alignItems: 'center',
-    // backgroundColor: 'gray',
+    backgroundColor: 'white',
   },
   bottomTabItem: {
     flex: 1,

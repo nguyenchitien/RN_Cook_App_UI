@@ -21,6 +21,15 @@ const recipes = [
     ingredients: 7,
     isFavorite: false,
   },
+  {
+    id: 3,
+    image: require('../../asserts/recipe-4.png'),
+    star: 5,
+    time: '50',
+    title: 'Ramen',
+    ingredients: 7,
+    isFavorite: false,
+  },
 ];
 
 export default Recipes = (props) => {
